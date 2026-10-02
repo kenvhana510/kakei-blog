@@ -1,0 +1,53 @@
+# 予約公開（家計を守る暮らし。restartlife.jp と同じ仕組み）
+#   queue ブランチの days/<YYYY-MM-DD>/ を、当日（JST）以前の分だけ日付順に main へ重ねて push する。
+#   days/ の中身は kakei-blog の scripts/build-queue.mjs が生成する（手で編集しない）。
+#   毎日 07:00 JST（22:00 UTC）。手動実行は Actions タブの Run workflow。
+name: publish-queue
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: publish-queue
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          ref: queue
+          path: _queue
+      - name: Apply queued days up to today (JST)
+        id: apply
+        run: |
+          set -e
+          TODAY="$(TZ=Asia/Tokyo date +%F)"
+          applied=""
+          for d in $(ls _queue/days | sort); do
+            if [ "$d" \> "$TODAY" ]; then break; fi
+            cp -R "_queue/days/$d/." .
+            applied="$applied $d"
+          done
+          rm -rf _queue
+          echo "today=$TODAY applied:$applied"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"; echo "changed=0" >> "$GITHUB_OUTPUT"
+          else
+            git -c user.name=publish-queue -c user.email=41898282+github-actions[bot]@users.noreply.github.com \
+              commit -m "予約公開 $TODAY（publish-queue）"
+            git push origin HEAD:main
+            echo "changed=1" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Request GitHub Pages build
+        if: steps.apply.outputs.changed == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "pages build request skipped"
