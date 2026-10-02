@@ -1,0 +1,484 @@
+{
+  "generatedAt": "2026-10-02T05:02:53.947Z",
+  "from": "2026-10-02",
+  "to": "2026-10-26",
+  "days": {
+    "2026-10-02": {
+      "publishes": [],
+      "files": [
+        ".nojekyll",
+        "404.html",
+        "about/index.html",
+        "ad-policy/index.html",
+        "assets/img/about-operator.webp",
+        "assets/img/cat-furusato.webp",
+        "assets/img/cat-kakeibo.webp",
+        "assets/img/cat-rakuten.webp",
+        "assets/img/home-hero.webp",
+        "furusato/index.html",
+        "index.html",
+        "kakeibo/index.html",
+        "privacy/index.html",
+        "rakuten/index.html",
+        "robots.txt",
+        "site/favicon.svg",
+        "site/site.css",
+        "site/site.js",
+        "site/theme.css"
+      ]
+    },
+    "2026-10-03": {
+      "publishes": [],
+      "files": []
+    },
+    "2026-10-04": {
+      "publishes": [],
+      "files": []
+    },
+    "2026-10-05": {
+      "publishes": [],
+      "files": []
+    },
+    "2026-10-06": {
+      "publishes": [
+        "furusato/hajimete-erabikata"
+      ],
+      "files": [
+        "assets/img/furusato-hajimete-erabikata.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/index.html",
+        "index.html"
+      ]
+    },
+    "2026-10-07": {
+      "publishes": [
+        "furusato/site-erabikata"
+      ],
+      "files": [
+        "assets/img/furusato-site-erabikata.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/index.html",
+        "furusato/site-erabikata/index.html",
+        "index.html"
+      ]
+    },
+    "2026-10-08": {
+      "publishes": [
+        "furusato/hitorigurashi"
+      ],
+      "files": [
+        "assets/img/furusato-hitorigurashi.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/site-erabikata/index.html",
+        "index.html"
+      ]
+    },
+    "2026-10-09": {
+      "publishes": [
+        "furusato/nichiyohin-kome"
+      ],
+      "files": [
+        "assets/img/furusato-nichiyohin-kome.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/site-erabikata/index.html",
+        "index.html"
+      ]
+    },
+    "2026-10-10": {
+      "publishes": [
+        "furusato/kaden"
+      ],
+      "files": [
+        "assets/img/furusato-kaden.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/kaden/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/site-erabikata/index.html",
+        "index.html"
+      ]
+    },
+    "2026-10-11": {
+      "publishes": [
+        "furusato/kogaku-kospa"
+      ],
+      "files": [
+        "assets/img/furusato-kogaku-kospa.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/site-erabikata/index.html",
+        "index.html"
+      ]
+    },
+    "2026-10-12": {
+      "publishes": [
+        "furusato/tabemono-igai"
+      ],
+      "files": [
+        "assets/img/furusato-tabemono-igai.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "index.html"
+      ]
+    },
+    "2026-10-13": {
+      "publishes": [
+        "rakuten/marathon-kihon"
+      ],
+      "files": [
+        "assets/img/rakuten-marathon-kihon.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "index.html",
+        "rakuten/index.html",
+        "rakuten/marathon-kihon/index.html"
+      ]
+    },
+    "2026-10-14": {
+      "publishes": [
+        "furusato/point-haishi-go"
+      ],
+      "files": [
+        "assets/img/furusato-point-haishi-go.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "index.html",
+        "rakuten/marathon-kihon/index.html"
+      ]
+    },
+    "2026-10-15": {
+      "publishes": [
+        "furusato/kani"
+      ],
+      "files": [
+        "assets/img/furusato-kani.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "index.html",
+        "rakuten/marathon-kihon/index.html"
+      ]
+    },
+    "2026-10-16": {
+      "publishes": [
+        "furusato/unagi-niku"
+      ],
+      "files": [
+        "assets/img/furusato-unagi-niku.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "rakuten/marathon-kihon/index.html"
+      ]
+    },
+    "2026-10-17": {
+      "publishes": [
+        "rakuten/poikatsu-kihon"
+      ],
+      "files": [
+        "assets/img/rakuten-poikatsu-kihon.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "rakuten/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html"
+      ]
+    },
+    "2026-10-18": {
+      "publishes": [
+        "furusato/jiki-itsu"
+      ],
+      "files": [
+        "assets/img/furusato-jiki-itsu.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html"
+      ]
+    },
+    "2026-10-19": {
+      "publishes": [
+        "rakuten/point-tsukaimichi"
+      ],
+      "files": [
+        "assets/img/rakuten-point-tsukaimichi.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "rakuten/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html",
+        "rakuten/point-tsukaimichi/index.html"
+      ]
+    },
+    "2026-10-20": {
+      "publishes": [
+        "kakeibo/tsuzuku-kakeibo"
+      ],
+      "files": [
+        "assets/img/kakeibo-tsuzuku-kakeibo.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "kakeibo/index.html",
+        "kakeibo/tsuzuku-kakeibo/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html",
+        "rakuten/point-tsukaimichi/index.html"
+      ]
+    },
+    "2026-10-21": {
+      "publishes": [
+        "kakeibo/tegaki-kakeibo"
+      ],
+      "files": [
+        "assets/img/kakeibo-tegaki-kakeibo.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "kakeibo/index.html",
+        "kakeibo/tegaki-kakeibo/index.html",
+        "kakeibo/tsuzuku-kakeibo/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html",
+        "rakuten/point-tsukaimichi/index.html"
+      ]
+    },
+    "2026-10-22": {
+      "publishes": [
+        "kakeibo/excel-template"
+      ],
+      "files": [
+        "assets/img/kakeibo-excel-template.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "kakeibo/excel-template/index.html",
+        "kakeibo/index.html",
+        "kakeibo/tegaki-kakeibo/index.html",
+        "kakeibo/tsuzuku-kakeibo/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html",
+        "rakuten/point-tsukaimichi/index.html"
+      ]
+    },
+    "2026-10-23": {
+      "publishes": [
+        "kakeibo/app-kihon"
+      ],
+      "files": [
+        "assets/img/kakeibo-app-kihon.webp",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "kakeibo/app-kihon/index.html",
+        "kakeibo/excel-template/index.html",
+        "kakeibo/index.html",
+        "kakeibo/tegaki-kakeibo/index.html",
+        "kakeibo/tsuzuku-kakeibo/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html",
+        "rakuten/point-tsukaimichi/index.html"
+      ]
+    },
+    "2026-10-24": {
+      "publishes": [
+        "furusato/5000en-shoshinsha"
+      ],
+      "files": [
+        "assets/img/furusato-5000en-shoshinsha.webp",
+        "furusato/5000en-shoshinsha/index.html",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "kakeibo/app-kihon/index.html",
+        "kakeibo/excel-template/index.html",
+        "kakeibo/tegaki-kakeibo/index.html",
+        "kakeibo/tsuzuku-kakeibo/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html",
+        "rakuten/point-tsukaimichi/index.html"
+      ]
+    },
+    "2026-10-25": {
+      "publishes": [
+        "furusato/biyou"
+      ],
+      "files": [
+        "assets/img/furusato-biyou.webp",
+        "furusato/5000en-shoshinsha/index.html",
+        "furusato/biyou/index.html",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "kakeibo/app-kihon/index.html",
+        "kakeibo/excel-template/index.html",
+        "kakeibo/tegaki-kakeibo/index.html",
+        "kakeibo/tsuzuku-kakeibo/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html",
+        "rakuten/point-tsukaimichi/index.html"
+      ]
+    },
+    "2026-10-26": {
+      "publishes": [
+        "kakeibo/setsuyaku-dougu"
+      ],
+      "files": [
+        "assets/img/kakeibo-setsuyaku-dougu.webp",
+        "furusato/5000en-shoshinsha/index.html",
+        "furusato/biyou/index.html",
+        "furusato/hajimete-erabikata/index.html",
+        "furusato/hitorigurashi/index.html",
+        "furusato/jiki-itsu/index.html",
+        "furusato/kaden/index.html",
+        "furusato/kani/index.html",
+        "furusato/kogaku-kospa/index.html",
+        "furusato/nichiyohin-kome/index.html",
+        "furusato/point-haishi-go/index.html",
+        "furusato/site-erabikata/index.html",
+        "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
+        "index.html",
+        "kakeibo/app-kihon/index.html",
+        "kakeibo/excel-template/index.html",
+        "kakeibo/index.html",
+        "kakeibo/setsuyaku-dougu/index.html",
+        "kakeibo/tegaki-kakeibo/index.html",
+        "kakeibo/tsuzuku-kakeibo/index.html",
+        "rakuten/marathon-kihon/index.html",
+        "rakuten/poikatsu-kihon/index.html",
+        "rakuten/point-tsukaimichi/index.html"
+      ]
+    }
+  }
+}
