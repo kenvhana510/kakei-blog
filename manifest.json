@@ -1,10 +1,12 @@
 {
-  "generatedAt": "2026-10-02T08:34:45.950Z",
-  "from": "2026-10-02",
+  "generatedAt": "2026-10-06T02:04:32.529Z",
+  "from": "2026-10-06",
   "to": "2026-11-02",
   "days": {
-    "2026-10-02": {
-      "publishes": [],
+    "2026-10-06": {
+      "publishes": [
+        "furusato/hajimete-erabikata"
+      ],
       "files": [
         ".nojekyll",
         "404.html",
@@ -19,7 +21,9 @@
         "assets/img/cat-ryoko.webp",
         "assets/img/cat-shokuhin.webp",
         "assets/img/cat-takuhaishoku.webp",
+        "assets/img/furusato-hajimete-erabikata.webp",
         "assets/img/home-hero.webp",
+        "furusato/hajimete-erabikata/index.html",
         "furusato/index.html",
         "index.html",
         "kaden/index.html",
@@ -35,29 +39,6 @@
         "site/site.js",
         "site/theme.css",
         "takuhaishoku/index.html"
-      ]
-    },
-    "2026-10-03": {
-      "publishes": [],
-      "files": []
-    },
-    "2026-10-04": {
-      "publishes": [],
-      "files": []
-    },
-    "2026-10-05": {
-      "publishes": [],
-      "files": []
-    },
-    "2026-10-06": {
-      "publishes": [
-        "furusato/hajimete-erabikata"
-      ],
-      "files": [
-        "assets/img/furusato-hajimete-erabikata.webp",
-        "furusato/hajimete-erabikata/index.html",
-        "furusato/index.html",
-        "index.html"
       ]
     },
     "2026-10-07": {
