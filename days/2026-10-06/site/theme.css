@@ -156,6 +156,10 @@ img { max-width: 100%; height: auto; }
 .brand { display: inline-flex; align-items: center; gap: 10px; flex: 0 1 auto; min-width: 0; padding: 4px 0; line-height: 1.25; text-decoration: none; color: var(--ink); }
 .brand:hover { color: var(--ink); }
 .brand__mark { flex: 0 0 30px; width: 30px; height: 30px; }
+/* ロゴ画像（assets/img/logo.webp）。題字の代わりに置き、タグラインだけ文字で添える。高さで指定し幅は比率どおり（1000×663） */
+.brand__logo { display: block; flex: 0 0 auto; width: auto; height: 46px; }
+.brand--logo { gap: 12px; padding: 2px 0; }
+.brand--logo .brand__sub { margin-top: 0; max-width: 46vw; white-space: normal; line-height: 1.5; }
 .brand__text { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
 /* 題字の字間は名前の長さで調整（短い名前は広く、長い名前は詰める。--chars は文字数） */
 .brand__name { font-family: var(--font-ja); font-size: 17px; font-weight: 700; letter-spacing: clamp(.06em, calc(.28em - var(--chars, 8) * .02em), .22em); white-space: nowrap; }
@@ -166,6 +170,9 @@ img { max-width: 100%; height: auto; }
   .brand__mark { flex-basis: 40px; width: 40px; height: 40px; }
   .brand__name { font-size: 26px; letter-spacing: clamp(.08em, calc(.3em - var(--chars, 8) * .02em), .24em); }
   .brand__sub { margin-top: 5px; font-size: 11.5px; letter-spacing: .18em; max-width: none; }
+  .brand__logo { height: 72px; }
+  .brand--logo { gap: 18px; }
+  .brand--logo .brand__sub { margin-top: 0; max-width: none; white-space: nowrap; }
   .site-nav { grid-column: 3; justify-self: end; display: flex; flex: none; flex-direction: column; align-items: flex-end; gap: 2px; font-size: 12.5px; line-height: 1.7; }
   .site-nav a { color: var(--ink-2); text-decoration: none; letter-spacing: .1em; font-weight: 500; white-space: nowrap; }
   .site-nav a:hover { color: var(--accent-deep); }
@@ -223,6 +230,7 @@ img { max-width: 100%; height: auto; }
   }
   .site-header.is-stuck .bar-brand { opacity: 1; visibility: visible; transition: opacity .3s; }
   .bar-brand .brand__mark { flex-basis: 28px; width: 28px; height: 28px; }
+  .bar-brand__logo { display: block; width: auto; height: 38px; }
   .bar-brand__name { display: none; max-width: 128px;   /* 本文の左端から目次帯の先頭までに収まる幅（1280px 以上で一定） */ overflow: hidden; text-overflow: ellipsis; font-size: 14px; font-weight: 700; letter-spacing: .1em; white-space: nowrap; }
 }
 @media (min-width: 1280px) { .bar-brand__name { display: inline; } }
@@ -965,6 +973,10 @@ table.cmp td:first-child { font-weight: 700; color: var(--ink); }
 .site-footer { margin-top: 0; background: var(--ink); color: rgba(247, 243, 236, .8); }
 .site-footer__inner { max-width: var(--wide); margin: 0 auto; padding: 52px var(--pad) 24px; container-type: inline-size; }
 .site-footer__head { text-align: center; padding-bottom: 32px; border-bottom: 1px solid rgba(247, 243, 236, .16); }
+/* フッターのロゴ（墨の地でも、ロゴの紙色の縁取りで読める） */
+.site-footer__logo { display: inline-block; margin-bottom: 20px; line-height: 0; }
+.site-footer__logo-img { width: auto; height: 72px; }
+@media (min-width: 720px) { .site-footer__logo { margin-bottom: 28px; } .site-footer__logo-img { height: 96px; } }
 .site-footer__kicker { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: 30px; line-height: 1.2; color: var(--paper); letter-spacing: -.005em; font-variation-settings: "opsz" 144, "WONK" 0; }
 .site-footer__tagline { margin-top: 14px; font-size: 12px; letter-spacing: .16em; color: rgba(247, 243, 236, .74); }
 .site-footer__cols { display: grid; gap: 28px; padding: 32px 0 28px; }

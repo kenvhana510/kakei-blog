@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T02:04:32.529Z",
+  "generatedAt": "2026-10-06T03:51:53.872Z",
   "from": "2026-10-06",
   "to": "2026-11-02",
   "days": {
@@ -23,6 +23,7 @@
         "assets/img/cat-takuhaishoku.webp",
         "assets/img/furusato-hajimete-erabikata.webp",
         "assets/img/home-hero.webp",
+        "assets/img/logo.webp",
         "furusato/hajimete-erabikata/index.html",
         "furusato/index.html",
         "index.html",
@@ -34,7 +35,9 @@
         "robots.txt",
         "ryoko/index.html",
         "shokuhin/index.html",
-        "site/favicon.svg",
+        "site/icon-180.png",
+        "site/icon-32.png",
+        "site/icon-512.png",
         "site/site.css",
         "site/site.js",
         "site/theme.css",
