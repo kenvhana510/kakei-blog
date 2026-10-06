@@ -178,7 +178,7 @@
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   var sel = ".sec-head, .genre-tile, .feature__item, .kstep__item, .post-grid > .post-card, .policy-box, " +
     ".article h2, .section--page h2, .aff-box, .article__figure, .related, .side-box, " +
-    ".site-footer__head, .site-footer__cols, .site-footer__note, .site-footer__wordmark";
+    ".site-footer__head, .site-footer__cols, .site-footer__note, .site-footer__wordmark, .site-footer__logo";
   var els = document.querySelectorAll(sel), list = [], vh = window.innerHeight || 0;
   for (var i = 0; i < els.length; i++) {
     var r = els[i].getBoundingClientRect();
