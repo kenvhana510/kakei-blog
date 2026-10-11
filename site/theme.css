@@ -126,6 +126,9 @@ h1, h2, h3, h4, .section__title, .kstep__item strong, .genre-tile__body strong,
 @media (min-width: 720px) { .article li, .section--page li { word-break: auto-phrase; text-wrap: pretty; } }
 /* 目次の項目は 1〜2 行の見出しなので、どの幅でも文節で折り返す（上の箇条書きの規則より強く） */
 .article .article__toc li { word-break: auto-phrase; text-wrap: pretty; }
+/* 数字と単位の間は NBSP なので「2025 年 12 月 27 日〜2026 年 1 月 4 日）」が 1 つの塊になり、狭い段では右へはみ出す。
+   入りきらない塊だけをその場で折る（break-word は他の行の折り返し位置も、表の列幅の計算も変えない） */
+.article p, .article li { overflow-wrap: break-word; }
 a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: .28em; }
 a:hover { color: var(--accent-deep); }
 ::selection { background: var(--accent-pale); color: var(--ink); }
@@ -685,6 +688,8 @@ img { max-width: 100%; height: auto; }
 @media (min-width: 720px) { .article h1 { font-size: 29px !important; line-height: 1.55 !important; margin-top: 14px !important; } }
 .article .post-meta { margin-top: 14px; padding-bottom: 0; font-size: 12px; letter-spacing: .14em; color: var(--mute); display: flex; align-items: center; gap: 14px; }
 .article .post-meta::after { content: ""; flex: 1 1 auto; height: 1px; background: var(--line); }
+/* スマホで 2 行になるとき「更新日 2026-｜10-09」と日付の途中（ハイフンの後ろ）で折れるので、行の長さを揃えて全角空白の位置で割る */
+.article .post-meta { text-wrap: balance; }
 /* 題のすぐ下にも PR の札を出す（全記事に PR 表記が入る仕様なので内容は食い違わない）。
    ノート PC の最初の画面に、本文先頭の PR 表記が入らない場合の補い。本文先頭の .pr-notice はそのまま残す */
 .is-post .article .post-meta::before {
@@ -796,9 +801,10 @@ table.cmp td:first-child { font-weight: 700; color: var(--ink); }
 .table-hint[hidden] { display: none; }
 .table-hint > span { position: absolute; right: 0; top: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; line-height: 1.6; letter-spacing: .08em; color: var(--accent-deep); white-space: nowrap; }
 @media (max-width: 719.98px) {
-  /* 固定する 1 列目は 8.5em 幅で折り返す（長い品目名で画面を占めない） */
+  /* 固定する 1 列目は 8.5em 幅で折り返す（長い品目名で画面を占めない）。
+     列の多い表は width だけだと最小幅まで縮み「うな｜ぎかば｜焼き」と語の中で折れるので min-width も付ける */
   .article table.cmp tr > :first-child {
-    position: sticky; left: 0; z-index: 1; width: 9em; padding-left: 10px; padding-right: 12px; white-space: normal; word-break: auto-phrase;
+    position: sticky; left: 0; z-index: 1; width: 9em; min-width: 9em; padding-left: 10px; padding-right: 12px; white-space: normal; word-break: auto-phrase;
     background: var(--paper); box-shadow: inset -1px 0 0 var(--line);
   }
   .article table.cmp tr > th:first-child { background: var(--paper-2); }
@@ -866,6 +872,10 @@ table.cmp td:first-child { font-weight: 700; color: var(--ink); }
 .aff-link--rakuten:hover { background: #a30000; }
 .aff-link--amazon, .aff-link--amazon:hover { background: #ff9900; color: #111; }
 .aff-link--amazon:hover { background: #f08a00; }
+/* ASP（A8.net・もしも・バリューコマース等）経由の公式サイト。ブランド色は使わず墨のボタン */
+.aff-link--asp, .aff-link--asp:hover { background: var(--ink); color: var(--paper); }
+.aff-link--asp:hover { background: var(--navy-deep); }
+.aff-pixel { position: absolute; width: 1px; height: 1px; border: 0; opacity: 0; pointer-events: none; }
 @media (hover: hover) {
   .aff-link:hover { transform: translateY(-1px); }
   .aff-link:hover::after { transform: translate(2px, -2px); }
