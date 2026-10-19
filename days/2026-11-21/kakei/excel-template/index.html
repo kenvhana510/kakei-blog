@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>エクセル家計簿の作り方。無料テンプレートの比べ方、4 列＋SUMIFS の式、カード明細 CSV の取り込み｜くらコツ</title>
+<meta name="description" content="エクセル・Google スプレッドシートの家計簿を、公式の無料テンプレート 6 件の中身（費目・集計・マクロの有無）と、自作の 4 列＋SUMIFS の式で整理します。楽天・三井住友・JCB・イオンのカード明細 CSV の期間と取り込み手順、家計調査 2025 年の 7 費目と比べる集計表、失敗例 5 つ、FAQ 7 問（2026 年 10 月時点）。">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="Dea2mudJxTDq61fD1egYaNxZ_TEKsvrf2q6Ja2hL5a4">
+<link rel="canonical" href="https://kurakotsu.jp/kakei/excel-template/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="エクセル家計簿の作り方。無料テンプレートの比べ方、4 列＋SUMIFS の式、カード明細 CSV の取り込み｜くらコツ">
+<meta property="og:description" content="エクセル・Google スプレッドシートの家計簿を、公式の無料テンプレート 6 件の中身（費目・集計・マクロの有無）と、自作の 4 列＋SUMIFS の式で整理します。楽天・三井住友・JCB・イオンのカード明細 CSV の期間と取り込み手順、家計調査 2025 年の 7 費目と比べる集計表、失敗例 5 つ、FAQ 7 問（2026 年 10 月時点）。">
+<meta property="og:url" content="https://kurakotsu.jp/kakei/excel-template/">
+<meta property="og:site_name" content="コツコツ得する暮らしのコツ　くらコツ">
+<meta property="og:image" content="https://kurakotsu.jp/assets/img/kakei-excel-template.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f3ec">
+<link rel="icon" href="../../site/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../../site/icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="../../site/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,300..400,50,0..1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=optional">
+<link rel="stylesheet" href="../../site/site.css">
+<link rel="stylesheet" href="../../site/theme.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ETRRZET65Q"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ETRRZET65Q');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://kurakotsu.jp/"},{"@type":"ListItem","position":2,"name":"家計・節約","item":"https://kurakotsu.jp/kakei/"},{"@type":"ListItem","position":3,"name":"エクセル家計簿の作り方","item":"https://kurakotsu.jp/kakei/excel-template/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"エクセル家計簿の作り方。無料テンプレートの比べ方、4 列＋SUMIFS の式、カード明細 CSV の取り込み","datePublished":"2026-10-29","dateModified":"2026-10-09","author":{"@type":"Person","name":"コツコツ得する暮らしのコツ　くらコツ"},"image":"https://kurakotsu.jp/assets/img/kakei-excel-template.webp"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"エクセルの家計簿は無料のテンプレートで十分ですか？","acceptedAnswer":{"@type":"Answer","text":"1 件ずつ入力してカテゴリで集計するなら、Microsoft の「家計簿 (月間)」か、ピボットテーブルを使うほうの「月間家計簿」（同じ名前が 2 件あり、もう 1 件は合計を書き込む形）で足ります。どちらもピボットテーブルとスライサーで費目別の合計が出て、マクロは含みません（2026 年 10 月 9 日にダウンロードして確認）。足りないのは年間の集計で、カテゴリ 12 個も 7 費目への書き換えが要ります。12 か月を並べたいなら、4 列＋SUMIFS の自作のほうが早く済みます。"}},{"@type":"Question","name":"スマホで入力できますか？","acceptedAnswer":{"@type":"Answer","text":"できます。Google スプレッドシートはスマートフォン・タブレット向けのアプリで表示と共同編集ができ、Excel も Microsoft アカウントがあれば Web 版・モバイル版を無料で使えます。費目の列をプルダウン（データの入力規則）にすると、スマホでも文字を打たずに選べます。"}},{"@type":"Question","name":"関数が苦手でも作れますか？","acceptedAnswer":{"@type":"Answer","text":"使う関数は SUMIFS・SUM と、月の境目を出す EDATE の 3 つです。費目 × 月の合計は =SUMIFS(明細!$C:$C,明細!$B:$B,$A3,明細!$A:$A,\">=\"&amp;B$1,明細!$A:$A,\"&lt;\"&amp;EDATE(B$1,1)) を 1 つのセルに入れて縦横にコピーすれば出ます。式を書きたくない場合は、Microsoft の「家計簿 (月間)」のようにピボットテーブルで集計するテンプレートを使い、データを足したら右クリックで「更新」します。"}},{"@type":"Question","name":"ネットで配られている家計簿テンプレートは安全ですか？","acceptedAnswer":{"@type":"Answer","text":"マクロを含むファイル（.xlsm・.xltm など）は注意が必要です。Microsoft は、インターネットから入手したファイルの VBA マクロを Windows 版 Office で既定でブロックしており、マクロが何をするか分からないファイルは削除するよう勧めています。集計は関数で足りるので、マクロなしの .xlsx を選びます。Microsoft の家計簿系テンプレート 6 件はすべて .xlsx でした（2026 年 10 月 9 日確認）。"}},{"@type":"Question","name":"年間の集計はどうすればいいですか？","acceptedAnswer":{"@type":"Answer","text":"明細を 1 枚のシートに書き続け、集計シートの 1 行目に各月の 1 日（2026/1/1〜12/1）を並べて、SUMIFS で月ごとに合計します。N 列に =SUM(B3:M3) を入れれば費目別の年間合計です。カード会社の明細は 15〜24 か月でダウンロードできなくなるので、毎月 CSV を貼っておくと前年同月とも比べられます。"}},{"@type":"Question","name":"カード明細の CSV が文字化けしたらどうしますか？","acceptedAnswer":{"@type":"Answer","text":"ダブルクリックで開かず、Excel の「データ」タブ →「テキストまたは CSV から」で取り込み直します。それでも直らなければ、楽天カードの公式 FAQ の案内どおり、CSV ファイルの文字コードを UTF-8 へ変換してから開きます。三井住友カード・JCB・イオンカードの FAQ には文字コードの記載がありませんでした（2026 年 10 月 9 日時点）。"}},{"@type":"Question","name":"夫婦で別々に付けた表を 1 つにまとめられますか？","acceptedAnswer":{"@type":"Answer","text":"Google スプレッドシートなら、合算用のファイルに IMPORTRANGE 関数で読み込めます。書き方は =IMPORTRANGE(\"スプレッドシートの URL\",\"明細!A2:D\") で、初回は「アクセスを許可」を押します（相手がオーナーのファイルなら相手の許可が要ります）。元の表を書き換えると、開いている合算側にも少し遅れて反映され、開いている間は 1 時間ごとにも更新を確認します。最初から 1 つのファイルを共有し、明細に「払った人」の列を足すほうが手間は少なく済みます。"}}]}</script>
+</head>
+<body class="is-post">
+<!-- ⚠️ scripts/build-site.mjs の生成物。手で編集しない。本文の正本は site/pages/ -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <p class="site-header__journal" aria-hidden="true">A journal for family living</p>
+    <a class="brand brand--logo" href="../../" style="--chars:4"><img class="brand__logo" src="../../assets/img/logo.webp" width="1000" height="663" alt="くらコツ" decoding="async"></a>
+    <nav class="site-nav" aria-label="サイトについて">
+      <a href="../../about/">運営者情報</a>
+      <a href="../../ad-policy/">広告掲載について</a>
+    </nav>
+  </div>
+  <div class="site-header__bar">
+    <a class="bar-brand" href="../../" tabindex="-1" aria-hidden="true"><img class="bar-brand__logo" src="../../assets/img/logo.webp" width="1000" height="663" alt="くらコツ" decoding="async"></a>
+    <nav class="cat-bar" aria-label="カテゴリ"><div class="cat-bar__inner"><a class="cat-bar__item cat-bar__item--furusato" href="../../furusato/"><span class="cat-bar__no">01</span><span>ふるさと納税</span></a><a class="cat-bar__item cat-bar__item--takuhaishoku" href="../../takuhaishoku/"><span class="cat-bar__no">02</span><span>宅配食</span></a><a class="cat-bar__item cat-bar__item--shokuhin" href="../../shokuhin/"><span class="cat-bar__no">03</span><span>食品</span></a><a class="cat-bar__item cat-bar__item--kaden" href="../../kaden/"><span class="cat-bar__no">04</span><span>家電</span></a><a class="cat-bar__item cat-bar__item--nichiyohin" href="../../nichiyohin/"><span class="cat-bar__no">05</span><span>日用品</span></a><a class="cat-bar__item cat-bar__item--kagu" href="../../kagu/"><span class="cat-bar__no">06</span><span>家具</span></a><a class="cat-bar__item cat-bar__item--ryoko" href="../../ryoko/"><span class="cat-bar__no">07</span><span>旅行</span></a><a class="cat-bar__item cat-bar__item--kakei is-current" href="../../kakei/" aria-current="page"><span class="cat-bar__no">08</span><span>家計・節約</span></a></div></nav>
+  </div>
+</header>
+
+<main>
+<div class="layout">
+  <div class="layout__main">
+    <div class="wrap"><nav class="breadcrumb" aria-label="現在位置"><ol><li><a href="../../">トップ</a></li><li><a href="../../kakei/">家計・節約</a></li><li>エクセル家計簿の作り方</li></ol></nav></div>
+
+<article class="article"><div class="wrap">
+  <span class="hero__eyebrow">KAKEI</span>
+  <h1 style="font-size:24px;line-height:1.45;color:var(--navy);margin-top:6px">エクセル家計簿の<wbr>作り方<span class="yk">。</span>無料テンプレートの<wbr>比べ方<span class="yk">、</span>4 列＋SUMIFS の<wbr>式<span class="yk">、</span>カード明細 CSV の<wbr>取り込み</h1>
+  <p class="post-meta">公開日 2026-10-29　更新日 2026-10-09</p>
+  <div class="article__eyecatch-box"><img class="article__eyecatch" src="../../assets/img/kakei-excel-template.webp" width="1200" height="675" alt="ノートパソコンの表と棒グラフを見る人のイラスト" fetchpriority="high" decoding="async"></div>
+  <p class="pr-notice">本記事にはアフィリエイト広告（PR）が含まれます。紹介した商品を購入されると、当サイトに報酬が入ることがあります。内容は運営者が調べて書いています。</p>
+  <p>この記事は、Microsoft の家計簿系テンプレート 6 件をダウンロードして中身を確かめ、Microsoft と Google の関数リファレンス、カード会社 4 社の明細ダウンロードの公式 FAQ、家計調査 2025 年を 2026 年 10 月 9 日に読んで、表計算の家計簿の作り方を式で整理したものです。道具そのもの（手書き・エクセル・アプリ）の選び方は <a href="../../kakei/tsuzuku-kakeibo/">続く家計簿の選び方</a> にまとめています。</p>
+
+  <h2>この記事でわかること・結論</h2>
+  <ol class="numbered">
+    <li><strong>スマホで入力したい・夫婦で同じ表を見たいなら Google スプレッドシート、PC 中心なら Excel です。</strong> Google は共有相手ごとに「編集者」「閲覧者（コメント可）」「閲覧者」を選べ、Excel も Microsoft アカウントがあれば Web 版・モバイル版を無料で使えます（OneDrive 5 GB）。Microsoft の家計簿系テンプレートを 6 件開いたところ、どれもマクロを含まない .xlsx で、12 か月を並べる年間の集計シートはありませんでした。年間で比べるなら自分で足します。</li>
+    <li><strong>自作するなら「日付・費目・金額・メモ」の 4 列と SUMIFS 1 本で足ります。</strong> 明細を 1 枚のシートに書き続け、集計シートに 7 費目 × 12 か月を式で出せば、月ごとのシートのコピーは要りません。家計調査 2025 年の勤労者世帯（世帯主 30<span class="nw">〜39</span> 歳 月 306,220 円、40<span class="nw">〜49</span> 歳 月 353,622 円）と同じ費目にしておくと、平均とそのまま比べられます。</li>
+    <li><strong>カード払いは明細の CSV を貼り付けて、費目だけ付けます。</strong> 楽天カード・三井住友カード・JCB は最大 15 か月分の明細を CSV で保存でき（楽天・三井住友はパソコンのブラウザから）、イオンカードは暮らしのマネーサイトで 24 か月分の明細書をダウンロードできます（FAQ 本文の手順は PDF）。文字化けしたら、楽天カードの公式案内どおり文字コードを UTF-8 に変換して開きます。</li>
+  </ol>
+  <nav class="article__toc" aria-label="目次"><strong>この記事の内容</strong><ol><li>前提: 表計算の家計簿で自動になること・ならないこと</li><li>公式の無料テンプレートを中身で比べる</li><li>判断の分岐: わが家はどれで始める？</li><li>自作テンプレートの列設計と関数（式つき）</li><li>作り方の 8 手順</li><li>カード明細 CSV の取り込み: 4 社の期間と手順</li><li>よくある失敗 5 つと回避策</li><li>よくある質問</li><li>出典</li></ol></nav>
+  <div class="note"><strong>この記事について</strong><ul><li>テンプレートの構成は、2026 年 10 月 9 日に Microsoft のテンプレート一覧からダウンロードした .xlsx の中身です。テンプレートは差し替わることがあります。</li><li>関数の書き方は Microsoft サポートと Google ドキュメント エディタ ヘルプの表記に合わせています。式の中のシート名・セル番地は本記事の例です。</li><li>カード明細の期間・形式は各社の公式 FAQ（2026 年 10 月 9 日時点）です。</li><li>支出の平均は総務省 家計調査 2025 年（勤労者世帯）の月平均で、柱記事の 7 費目の表と同じ値です。</li></ul></div>
+
+  <h2>前提: 表計算の家計簿で自動になること・ならないこと</h2>
+  <p>自動になるのは足し算です。費目別の合計（SUMIF・SUMIFS）、月ごとの比較、平均との差は、式を一度作れば毎月そのまま出ます。明細を取ってくる作業は自動になりません。銀行やカードとつなぐ機能はないので、カード払いは明細の CSV をダウンロードして貼り、現金払いは手で入力します。裏返すと、口座やカードのログイン情報をどこにも預けずに済み、アプリの無料枠のような閲覧期間の制限もありません。</p>
+  <p>手間の目安は、CSV の貼り付けが月 1 回、現金分の入力が週 1 回です。家計調査 2025 年では、カードで買った分にあたる「クレジット購入借入金」が勤労者世帯 30<span class="nw">〜39</span> 歳で月 149,772 円と消費支出の約半分なので（表番号 3 から計算）、CSV を使うかどうかで手入力の量が大きく変わります。</p>
+
+  <h2>公式の無料テンプレートを中身で比べる</h2>
+  <p>Microsoft のテンプレート一覧「カスタマイズできる無料の予算テンプレート」には 2026 年 10 月 9 日時点で 30 件が並び、名前に「家計簿」「家計予算」が付くものが 5 件あります。家計に使える 6 件（同名で中身が違う「月間家計簿」2 件、「家計簿」「家計予算」「家計簿 (月間)」「毎月の予算」）の .xlsx をダウンロードし、シート構成・数式・入力規則・VBA（マクロ）の有無を確かめました。Google スプレッドシートのテンプレート ギャラリーには、「個人用」の欄に「月間予算」「年間予算」があります（同日確認）。</p>
+  <div class="table-wrap"><table class="cmp">
+    <tr><th>テンプレート</th><th>入力のしかた・費目</th><th>費目の変更</th><th>集計のしくみ</th><th>年間集計</th><th>マクロ</th><th>向く人</th></tr>
+    <tr><td>Microsoft「月間家計簿」（ピボットのあるほう）「家計簿 (月間)」</td><td>1 行 1 支出（説明・カテゴリ・予算・実費）。カテゴリは食費（食べ物）・住居費・交通費・子供・保険・ペット費用・税金など 12 個</td><td>可。「追加データ」シートの一覧に書き足すとプルダウンに出る</td><td>ピボットテーブル＋スライサー。データを足したら右クリックで「更新」</td><td>なし</td><td>なし</td><td>1 件ずつ入力して費目別に見たい</td></tr>
+    <tr><td>Microsoft「月間家計簿」（もう 1 件）</td><td>カテゴリ 13 種 × サブカテゴリ 75 行（住居費の「住宅ローン/家賃」など）に「予測」「実績」を書く</td><td>可（行を書き換え）</td><td>SUBTOTAL で合計、予測残高と実績残高の差</td><td>なし</td><td>なし</td><td>月末に細かい項目ごとの合計を書く</td></tr>
+    <tr><td>Microsoft「家計簿」</td><td>支出 20 項目（住居費・食料品・電話料金・保育・授業料など）に「予測」「実際」の月合計を書く</td><td>可（項目名を書き換え）</td><td>SUBTOTAL で合計、収入との差額とグラフ</td><td>なし</td><td>なし</td><td>月末に合計だけ書く</td></tr>
+    <tr><td>Microsoft「家計予算」</td><td>支出・金額・支払う人・メモの 4 列（支払う人はプルダウン）</td><td>可</td><td>SUMIFS で人ごとの合計。綴りが違うと「不均衡の合計です」と表示</td><td>なし</td><td>なし</td><td>夫婦の立て替えを精算したい</td></tr>
+    <tr><td>Microsoft「毎月の予算」</td><td>日付・金額・内容の 3 列</td><td>費目の列がない</td><td>SUM で支出・収入・残高だけ</td><td>なし</td><td>なし</td><td>残高だけ見たい</td></tr>
+    <tr><td>Google「月間予算」「年間予算」</td><td>ギャラリーで選ぶとコピーがドライブに作られる</td><td>可</td><td>本記事では未確認</td><td>「年間予算」が別にある</td><td>本記事では未確認（Google 作成）</td><td>スマホ入力・夫婦共有</td></tr>
+  </table></div>
+  <p>出典: Microsoft「カスタマイズできる無料の予算テンプレート」と各テンプレートの .xlsx、Google ドキュメント エディタ ヘルプ「テンプレートからファイルを作成する」（いずれも 2026 年 10 月 9 日取得）。Microsoft の 6 件はすべて .xlsx で、ファイルの中に VBA の部品（vbaProject）はありませんでした。表に載せていない「月間個人予算」は、12 個の費目ごとに表が分かれた形です。</p>
+  <p>読み方は 3 つです。(a) ピボットのある「月間家計簿」と「家計簿 (月間)」は 1 件ずつ入力してカテゴリを選ぶ形で、本記事の自作に近い作りです。ただしカテゴリにペット費用・税金などがあるので、使う前に 7 費目へ書き換えます。ダウンロードする前に、一覧のサムネイルで 2 件の「月間家計簿」を見分けます。(b) 「家計簿」ともう 1 件の「月間家計簿」は月末に合計を書き写す形で、カードの CSV を貼る使い方には向きません。(c) どれにも見本の数字（「Torres 家 | 2023 年 2 月」の収入 4,000 など）が入っています。見本の行を消さないと合計に混ざります。</p>
+  <div class="table-wrap"><table class="cmp">
+    <tr><th>比べる点</th><th>Excel（Microsoft）</th><th>Google スプレッドシート</th></tr>
+    <tr><td>費用</td><td>Microsoft アカウントで Web 版・モバイル版は無料、OneDrive 5 GB つき</td><td>「Google アカウントをお持ちなら、どなたでも」使える</td></tr>
+    <tr><td>スマホ入力</td><td>Web 版・モバイル版で可</td><td>スマートフォン・タブレット向けアプリで表示・共同編集が可</td></tr>
+    <tr><td>夫婦の共有</td><td>OneDrive に保存し、Web 版でリアルタイムに共同作業</td><td>相手ごとに「編集者」「閲覧者（コメント可）」「閲覧者」を選ぶ</td></tr>
+    <tr><td>オフライン</td><td>デスクトップ版で PC に保存すれば可</td><td>パソコンは Chrome か Edge に「Google オフライン ドキュメント」拡張機能を入れ、ドライブの設定で「オフライン」を有効に（シークレット ブラウジングでは不可）</td></tr>
+    <tr><td>マクロ</td><td>インターネットから入手したファイルの VBA マクロは Windows 版 Office で既定でブロック（Excel は最新チャネルのバージョン 2206 から）。Mac・モバイル・Web 版は対象外</td><td>本記事の自作は関数だけで作り、マクロは使わない</td></tr>
+  </table></div>
+  <p>出典: Microsoft「無料の Microsoft 365 Online」、Google Workspace「Google スプレッドシート」、Microsoft Learn「インターネットからのマクロは、Office で既定でブロックされます」、Google ドキュメント エディタ ヘルプ「Google ドライブのファイルを共有する」「オフライン時に Google ドキュメント、スプレッドシート、スライドで作業する」（いずれも 2026 年 10 月 9 日取得）。</p>
+
+  <h2>判断の分岐: わが家はどれで始める？</h2>
+  <ul class="bullets">
+    <li><strong>スマホで入力したい、夫婦で同じ表を見たい</strong>: Google スプレッドシート。配偶者を「編集者」にして共有します。別々のファイルで付けたいなら、合算用のファイルに IMPORTRANGE で 2 人の明細を読み込みます（元の表の変更は少し遅れて反映）。</li>
+    <li><strong>入力は PC で月 1 回まとめて</strong>: Excel。楽天カード・三井住友カードの CSV はパソコンのブラウザから保存する形なので、流れが合います。</li>
+    <li><strong>関数を書くのが苦手</strong>: 公式テンプレート。1 件ずつ入力するなら「月間家計簿」系でカテゴリを 7 費目に書き換え、月末に合計だけ書くなら「家計簿」の 20 項目を 7<span class="nw">〜10</span> 項目に減らします。</li>
+    <li><strong>自分で作る、年間で比べたい</strong>: 4 列の明細＋SUMIFS の集計（次の節）。家計簿系のテンプレートには年間の集計がありません。同じ一覧の「シンプルな年間予算」は 1<span class="nw">〜12</span> 月の列を持ちますが、月の合計を手で書く形なので、明細から 12 か月を出すなら自作が早道です。立て替えの精算もしたいなら「払った人」列を足します。</li>
+    <li><strong>見送ってよい場合</strong>: 支払いのほとんどがカード 1 枚と口座引落しで、費目別の合計が毎月ほぼ同じなら、毎月の表は要りません。年 2 回、1 か月分の CSV を 7 費目に分けて平均と比べれば足ります。</li>
+  </ul>
+
+  <h2>自作テンプレートの列設計と関数（式つき）</h2>
+  <p>シートは「明細」（1 行 1 支出で書き続ける）と「集計」（費目 × 月の合計）の 2 枚だけです。月ごとにシートを増やさないので、コピーで式がずれません。式は Microsoft サポートの SUMIF・SUMIFS・EDATE の書式（SUMIFS は合計対象範囲が最初、SUMIF は 3 番目）どおりで、Google スプレッドシートの構文も同じ並びです。</p>
+  <div class="table-wrap"><table class="cmp">
+    <tr><th>場所</th><th>入れるもの</th><th>式・設定（例）</th><th>つまずく点</th></tr>
+    <tr><td>明細!A 列</td><td>日付（利用日）</td><td>2026/10/3 のように日付で入力</td><td>文字列の日付は SUMIFS の日付条件に入らない</td></tr>
+    <tr><td>明細!B 列</td><td>費目（7 個から選ぶ）</td><td>Excel: データ → データの入力規則 → 入力値の種類「リスト」→ 元の値 <code>=集計!$A$3:$A$9</code>。Google: データ → データの入力規則 → 「リストを範囲で指定」</td><td>手入力だと表記ゆれで集計から漏れる。Google は既定でリスト外の入力を拒否</td></tr>
+    <tr><td>明細!C 列</td><td>金額（円、数値）</td><td>返品・払い戻しはマイナスで入力</td><td>分割払いは利用日の行に利用金額で 1 回だけ書く</td></tr>
+    <tr><td>明細!D 列</td><td>メモ（店名など、任意）</td><td>CSV の店名をそのまま残す</td><td>品名までは書かない</td></tr>
+    <tr><td>集計!B1〜M1</td><td>各月の 1 日</td><td>B1 に 2026/1/1、C1 に <code>=EDATE(B1,1)</code> を入れて M1 までコピー</td><td>表示形式を「yyyy/m」にすると見やすい</td></tr>
+    <tr><td>集計!B3〜M9</td><td>費目 × 月の合計</td><td><code>=SUMIFS(明細!$C:$C,明細!$B:$B,$A3,明細!$A:$A,"&gt;="&amp;B$1,明細!$A:$A,"&lt;"&amp;EDATE(B$1,1))</code> を B3 に入れ、M9 までコピー</td><td>$ の位置が肝心。費目は列 A に固定（$A3）、月は行 1 に固定（B$1）</td></tr>
+    <tr><td>集計!B10〜M10</td><td>月の合計</td><td><code>=SUM(B3:B9)</code></td><td>—</td></tr>
+    <tr><td>集計!B11〜M11</td><td>照合（集計漏れの検出）</td><td><code>=SUMIFS(明細!$C:$C,明細!$A:$A,"&gt;="&amp;B$1,明細!$A:$A,"&lt;"&amp;EDATE(B$1,1))-B10</code></td><td>0 以外なら、費目が空欄か表記ゆれの行がある</td></tr>
+    <tr><td>集計!N3〜N9</td><td>年間合計</td><td><code>=SUM(B3:M3)</code></td><td>—</td></tr>
+    <tr><td>集計!P3〜P9</td><td>家計調査の平均との比（例: 10 月）</td><td><code>=K3/$O3</code>（K 列が 10 月。O 列に平均を入力、表示形式は %）</td><td>110% を超える費目から見直す</td></tr>
+    <tr><td>別の集計（全期間）</td><td>費目の累計</td><td><code>=SUMIF(明細!$B:$B,$A3,明細!$C:$C)</code></td><td>SUMIF は条件範囲が先、合計範囲が後</td></tr>
+    <tr><td>Google だけの方法</td><td>1 か月分を式 1 本で</td><td><code>=QUERY(明細!A1:D,"select B, sum(C) where A &gt;= date '2026-10-01' and A &lt; date '2026-11-01' group by B label sum(C) '合計'",1)</code></td><td>QUERY の month() は 1 月が 0 を返す（0 始まり）。月で絞るなら上のように日付の範囲で書く</td></tr>
+  </table></div>
+  <p>出典: Microsoft サポート「SUMIF 関数」「SUMIFS 関数」「EDATE 関数」「セルにデータの入力規則を適用する」「相対参照、絶対参照、複合参照を切り替える」、Google ドキュメント エディタ ヘルプ「SUMIF」「SUMIFS 関数」「EDATE」「QUERY 関数」「セル内にプルダウン リストを作成する」、Google Visualization API Query Language（いずれも 2026 年 10 月 9 日取得）。比較演算子とセルをつなぐ書き方（<code>"&gt;" &amp; C2</code>）は SUMIF の公式の例と同じです。</p>
+  <p>集計シートの A 列と O 列には、柱記事と同じ 7 費目と家計調査 2025 年の平均を入れます。</p>
+  <div class="table-wrap"><table class="cmp">
+    <tr><th>集計!A 列（費目）</th><th>家計調査の費目</th><th>O 列: 世帯主 30<span class="nw">〜39</span> 歳（月・円）</th><th>O 列: 世帯主 40<span class="nw">〜49</span> 歳（月・円）</th></tr>
+    <tr><td>食費</td><td>食料</td><td>84,116</td><td>101,022</td></tr>
+    <tr><td>住まい・光熱</td><td>住居＋光熱・水道</td><td>43,770</td><td>42,899</td></tr>
+    <tr><td>車・通信</td><td>交通・通信</td><td>53,168</td><td>52,345</td></tr>
+    <tr><td>日用品・衣類</td><td>家具・家事用品＋被服及び履物</td><td>27,095</td><td>27,752</td></tr>
+    <tr><td>教育</td><td>教育</td><td>8,503</td><td>26,849</td></tr>
+    <tr><td>娯楽</td><td>教養娯楽</td><td>32,675</td><td>37,662</td></tr>
+    <tr><td>その他</td><td>保健医療＋その他の消費支出</td><td>56,895</td><td>65,095</td></tr>
+    <tr><td><strong>合計（B10 と比べる）</strong></td><td>消費支出</td><td><strong>306,220</strong></td><td><strong>353,622</strong></td></tr>
+  </table></div>
+  <p>出典: 総務省 家計調査 家計収支編 2025 年 表番号 3（二人以上の世帯のうち勤労者世帯、e-Stat、2026 年 10 月 9 日取得）。7 費目は 10 大費目の足し算で、端数処理のため合計は消費支出と 2 円ずれます。平均は目安で、持ち家か賃貸か、車の有無で違って当然です。5 費目にまとめる方法は <a href="../../kakei/tsuzuku-kakeibo/">続く家計簿の選び方</a> の表を使います。</p>
+
+  <h2>作り方の 8 手順</h2>
+  <p>公式テンプレートを使う場合は、手順 1<span class="nw">〜5</span> の代わりにテンプレートを開いて見本の行を消し、カテゴリを 7 費目に書き換えます。手順 6 以降は同じです。</p>
+  <ol class="numbered">
+    <li><strong>ブックを作り、シートを「明細」「集計」の 2 枚にする。</strong> 夫婦で使うなら Google ドライブか OneDrive に保存します。つまずく点: PC だけに保存すると、スマホからも配偶者からも入力できません。</li>
+    <li><strong>明細の 1 行目に「日付」「費目」「金額」「メモ」を書く。</strong> Excel なら「ホーム → テーブルとして書式設定」にすると、1 つのセルに入れた式が列全体に入り（集計列）、足した行は更新時にピボットテーブルにも入ります（Microsoft のヘルプ）。</li>
+    <li><strong>集計の A3〜A9 に 7 費目、O 列に平均を入れる。</strong> つまずく点: 費目名は全角・半角まで、明細に入る文字と同じにします。</li>
+    <li><strong>明細!B 列に入力規則（プルダウン）を付ける。</strong> 元の値は <code>=集計!$A$3:$A$9</code>。費目は 7 個から選ぶだけになります。</li>
+    <li><strong>集計に月と式を入れる。</strong> B1 に 2026/1/1、C1〜M1 に EDATE。B3 の SUMIFS を B3:M9 にコピーし、10 行目に月合計、11 行目に照合、N 列に年間合計、P 列に平均との比を入れます。つまずく点: コピー先の式が別の行・列を指していないか、$ の位置を確かめます（F4 キーで切り替え）。</li>
+    <li><strong>固定費は月初に 1 回だけ入れる。</strong> 家賃・保険料・通信費・月謝を予定額で入れ、引落し額が違えばその行だけ直します。年払いの保険料や自動車税は、メモに「年払い」と書けば月の合計が跳ねた理由が分かります。</li>
+    <li><strong>カード明細は月 1 回 CSV を貼り、現金は週 1 回入力する。</strong> つまずく点: 口座の明細に出る「カードの引落し額」は入れません。カードの利用分と二重に数えます。</li>
+    <li><strong>月末に照合が 0 か確かめ、平均との比を見て 1 つ決める。</strong> 11 行目が 0 でなければ、費目が空欄の行を埋めます。P 列が 110% を超える費目から、来月の行動を 1 つ決めます。見直す順番と年間の試算は <a href="../../kakei/kurashi-minaoshi/">家族の支出を 7 つのジャンルで見直す順番</a> にまとめています。</li>
+  </ol>
+
+  <h2>カード明細 CSV の取り込み: 4 社の期間と手順</h2>
+  <p>カード会社の公式 FAQ で、明細のダウンロードの形式・期間・方法を確かめました。楽天カード・JCB・イオンカードは、ダウンロードできるのは請求額が確定した明細だと明記しています。</p>
+  <div class="table-wrap"><table class="cmp">
+    <tr><th>カード</th><th>形式</th><th>どこから</th><th>さかのぼれる期間</th><th>注意点（公式の記載）</th></tr>
+    <tr><td>楽天カード</td><td>PDF・CSV</td><td>CSV はパソコン版 楽天e-NAVI の「ご利用明細」のみ（アプリは PDF）。「WEB明細サービス」の登録が前提</td><td>過去 15 カ月以内の確定分</td><td>文字化けしたら「文字コードを UTF-8 へ変換し開いて」と案内。PDF の当月分は毎月 12 日以降に反映。16 カ月以上前は表示されない</td></tr>
+    <tr><td>三井住友カード</td><td>CSV のみ（PDF 出力は非対応）</td><td>パソコンのブラウザで Vpass の WEB 明細書の画面上部「CSV 形式で保存する」</td><td>最大過去 15 ヵ月分</td><td>Excel では「データ」タブ → 「テキストファイル」→ 区切り文字「カンマ」で取り込む手順を案内（Excel 2010 の例）。2 回払い・分割払いは、確定前は回数が出ず全額表示</td></tr>
+    <tr><td>JCB</td><td>PDF・CSV</td><td>MyJCB の「明細を見る」→「明細書を PDF・CSV でダウンロードできます」</td><td>最長 15 ヵ月分（閲覧は最大 17 ヵ月分）。MyJCB 登録前の明細は過去 6 ヵ月分のみ CSV</td><td>1 回に 1 ヵ月分。家族カードの ID でログインしているとダウンロード不可。支払金額は毎月 24 日前後に確定</td></tr>
+    <tr><td>イオンカード</td><td>FAQ の題は「PDF・CSV」（本文の手順は PDF の説明）</td><td>AEON Pay アプリ、暮らしのマネーサイト</td><td>アプリは過去 12 ヶ月分、暮らしのマネーサイトは過去 24 ヶ月分</td><td>ダウンロード時にカードの有効期限とセキュリティコードで本人確認。デビットカード・退会済みのカードは不可。確定した月のみ</td></tr>
+  </table></div>
+  <p>出典: 楽天カード「ご利用明細書のダウンロード方法を知りたい」「過去分の利用明細を確認する方法を知りたい」、三井住友カード「ご利用明細の見方と使い方」、JCB「カードご利用代金明細書のダウンロードはできますか？」「過去の明細をさかのぼって確認したい。」、イオンカード「ご請求明細書（PDF・CSV）のダウンロード・印刷方法を教えてください。」（いずれも 2026 年 10 月 9 日取得）。CSV の文字コードを明記していたのは楽天カードの文字化け時の案内だけで、他の 3 社の FAQ には記載がありませんでした。</p>
+  <p>ここから言えるのは 2 つです。(a) 楽天カード・三井住友カード・JCB は 15 か月を過ぎた明細をダウンロードできないので、前年同月と比べたいなら、毎月 CSV を明細シートに貼っておくことがそのまま保存になります。(b) ダウンロードの単位は請求月ごとの明細です。家計簿は利用日で集計するので（SUMIFS の日付条件）、請求月の CSV の中に前月の利用分が混ざっていても、利用日の列が正しければ月の集計はずれません。</p>
+  <ol class="numbered">
+    <li><strong>月に 1 回、確定した請求月の CSV をダウンロードする。</strong> つまずく点: JCB は家族カードの ID ではダウンロードできません。本会員の ID でログインします。</li>
+    <li><strong>取り込み用のシートに読み込む。</strong> Excel は「データ」タブの「テキストまたは CSV から」でファイルを選び、「読み込み先」を指定します（三井住友カードの案内は Excel 2010 の「テキストファイル」→ 区切り文字「カンマ」）。Google は「ファイル → インポート」で「新しいシートを挿入する」、区切り文字は「自動的に検出」かカンマです。</li>
+    <li><strong>日付・店名・金額の列だけを明細シートの最終行の下へコピーする。</strong> 支払区分などの列は要りません。</li>
+    <li><strong>費目をプルダウンで付ける。</strong> 同じ店は毎月同じ費目なので、2 か月目からは前月の行を見て付けられます。食品と日用品を一緒に買った店は金額の多いほうに入れ、差が大きいときだけ行を分けます。</li>
+    <li><strong>文字化けしたら、楽天カードの案内どおり文字コードを UTF-8 に変換して開き直す。</strong></li>
+    <li><strong>照合の行（集計!11 行目）が 0 になるのを確かめる。</strong></li>
+  </ol>
+
+  <h2>よくある失敗 5 つと回避策</h2>
+  <ol class="numbered">
+    <li><strong>出所の分からないマクロ付きファイルのブロックを外す。</strong> Microsoft は、VBA マクロがマルウェアやランサムウェアを広げる手口としてよく使われるとして、インターネットから入手したファイルのマクロを Windows 版 Office で既定でブロックしています（「セキュリティ リスク」のバナーが出る）。「プロパティ」→「全般」の「ブロック解除」で外せますが、Microsoft は、マクロが何をするか分からないファイルなら削除するよう勧めています。回避策: 家計簿にマクロは要りません。配布元の分からない .xlsm・.xltm は開かず、公式テンプレートか関数だけの自作ファイルを使います。</li>
+    <li><strong>費目の表記ゆれで集計から漏れる。</strong> SUMIF・SUMIFS は条件の文字と一致した行だけを足すので、「食費」と「食費 」（末尾に空白）は別の費目になり、どの月の合計にも入りません。回避策: 費目はプルダウンで選ばせ、照合の行（明細の月合計 − 費目別の合計）が 0 かを毎月見ます。</li>
+    <li><strong>月ごとにシートをコピーして、式が別の範囲を指す。</strong> 相対参照の式はコピー先に合わせて参照先が動きます（Microsoft の例では A1 が 2 行 2 列先で C3 になる）。行を足した月だけ合計範囲から外れることもあります。回避策: 明細は 1 枚に書き続けて月は SUMIFS の日付条件で分け、範囲は列全体（<code>明細!$C:$C</code>）、固定する行・列には $ を付けます。</li>
+    <li><strong>カード明細の CSV が文字化けする。</strong> CSV をダブルクリックで開くと、Excel は既定の設定でデータを解釈します（Microsoft のヘルプ）。回避策: 「データ」タブの「テキストまたは CSV から」で取り込み直し、直らなければ文字コードを UTF-8 に変換してから開きます（楽天カードの案内）。</li>
+    <li><strong>カードの利用分と口座の引落し額を両方入れて二重に数える。</strong> 回避策: カード払いは CSV（利用日の明細）だけを入れ、口座からは家賃・保険料など、カードを通らない支出だけを入れます。ATM で引き出した現金は、使った時点でレシートから入れます。</li>
+  </ol>
+
+  <h2>よくある質問</h2>
+  <div class="faq"><details><summary>エクセルの家計簿は無料のテンプレートで十分ですか？</summary><div class="faq__a">1 件ずつ入力してカテゴリで集計するなら、Microsoft の「家計簿 (月間)」か、ピボットテーブルを使うほうの「月間家計簿」（同じ名前が 2 件あり、もう 1 件は合計を書き込む形）で足ります。どちらもピボットテーブルとスライサーで費目別の合計が出て、マクロは含みません（2026 年 10 月 9 日にダウンロードして確認）。足りないのは年間の集計で、カテゴリ 12 個も 7 費目への書き換えが要ります。12 か月を並べたいなら、4 列＋SUMIFS の自作のほうが早く済みます。</div></details>
+<details><summary>スマホで入力できますか？</summary><div class="faq__a">できます。Google スプレッドシートはスマートフォン・タブレット向けのアプリで表示と共同編集ができ、Excel も Microsoft アカウントがあれば Web 版・モバイル版を無料で使えます。費目の列をプルダウン（データの入力規則）にすると、スマホでも文字を打たずに選べます。</div></details>
+<details><summary>関数が苦手でも作れますか？</summary><div class="faq__a">使う関数は SUMIFS・SUM と、月の境目を出す EDATE の 3 つです。費目 × 月の合計は <code>=SUMIFS(明細!$C:$C,明細!$B:$B,$A3,明細!$A:$A,">="&amp;B$1,明細!$A:$A,"&lt;"&amp;EDATE(B$1,1))</code> を 1 つのセルに入れて縦横にコピーすれば出ます。式を書きたくない場合は、Microsoft の「家計簿 (月間)」のようにピボットテーブルで集計するテンプレートを使い、データを足したら右クリックで「更新」します。</div></details>
+<details><summary>ネットで配られている家計簿テンプレートは安全ですか？</summary><div class="faq__a">マクロを含むファイル（.xlsm・.xltm など）は注意が必要です。Microsoft は、インターネットから入手したファイルの VBA マクロを Windows 版 Office で既定でブロックしており、マクロが何をするか分からないファイルは削除するよう勧めています。集計は関数で足りるので、マクロなしの .xlsx を選びます。Microsoft の家計簿系テンプレート 6 件はすべて .xlsx でした（2026 年 10 月 9 日確認）。</div></details>
+<details><summary>年間の集計はどうすればいいですか？</summary><div class="faq__a">明細を 1 枚のシートに書き続け、集計シートの 1 行目に各月の 1 日（2026/1/1<span class="nw">〜12</span>/1）を並べて、SUMIFS で月ごとに合計します。N 列に <code>=SUM(B3:M3)</code> を入れれば費目別の年間合計です。カード会社の明細は 15<span class="nw">〜24</span> か月でダウンロードできなくなるので、毎月 CSV を貼っておくと前年同月とも比べられます。</div></details>
+<details><summary>カード明細の CSV が文字化けしたらどうしますか？</summary><div class="faq__a">ダブルクリックで開かず、Excel の「データ」タブ →「テキストまたは CSV から」で取り込み直します。それでも直らなければ、楽天カードの公式 FAQ の案内どおり、CSV ファイルの文字コードを UTF-8 へ変換してから開きます。三井住友カード・JCB・イオンカードの FAQ には文字コードの記載がありませんでした（2026 年 10 月 9 日時点）。</div></details>
+<details><summary>夫婦で別々に付けた表を 1 つにまとめられますか？</summary><div class="faq__a">Google スプレッドシートなら、合算用のファイルに IMPORTRANGE 関数で読み込めます。書き方は <code>=IMPORTRANGE("スプレッドシートの URL","明細!A2:D")</code> で、初回は「アクセスを許可」を押します（相手がオーナーのファイルなら相手の許可が要ります）。元の表を書き換えると、開いている合算側にも少し遅れて反映され、開いている間は 1 時間ごとにも更新を確認します。最初から 1 つのファイルを共有し、明細に「払った人」の列を足すほうが手間は少なく済みます。</div></details></div>
+
+  <p>家計簿の道具そのもの（手書き・エクセル・アプリ）の選び方と、続けるための記録の頻度は <a href="../../kakei/tsuzuku-kakeibo/">続く家計簿の選び方</a>、アプリの無料枠と安全の確認点は <a href="../../kakei/app-kihon/">家計簿アプリの選び方</a> にまとめています。手書きの家計簿の選び方は、今月公開する関連記事で扱います。</p>
+
+  <h2>出典</h2>
+  <p>いずれも 2026 年 10 月 9 日に取得。テンプレートの構成は同日ダウンロードした .xlsx の中身、カード明細の期間は同日時点の公式 FAQ の記載です。変わることがあるので、使う前に各ページでご確認ください。</p>
+  <ul class="bullets">
+    <li><a href="https://excel.cloud.microsoft/create/ja/budget-templates/" target="_blank" rel="noopener">Microsoft Excel「カスタマイズできる無料の予算テンプレート」（旧 create.microsoft.com の予算テンプレート一覧。「月間家計簿」2 件・「家計簿」「家計予算」「家計簿 (月間)」「毎月の予算」「月間個人予算」「シンプルな年間予算」の .xlsx をここからダウンロード）</a></li>
+    <li><a href="https://www.microsoft.com/ja-jp/microsoft-365/free-office-online-for-the-web" target="_blank" rel="noopener">Microsoft「無料の Microsoft 365 Online | Word、Excel、PowerPoint」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/office/sumif-%E9%96%A2%E6%95%B0-169b8c99-c05c-4483-a712-1697a653039b" target="_blank" rel="noopener">Microsoft サポート「SUMIF 関数」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/office/sumifs-%E9%96%A2%E6%95%B0-c9e748f5-7ea7-455d-9406-611cebce642b" target="_blank" rel="noopener">Microsoft サポート「SUMIFS 関数」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/office/edate-%E9%96%A2%E6%95%B0-3c920eb2-6e66-44e7-a1f5-753ae47ee4f5" target="_blank" rel="noopener">Microsoft サポート「EDATE 関数」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/office/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B%E3%83%94%E3%83%9C%E3%83%83%E3%83%88%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B-a9a84538-bfe9-40a9-a8e9-f99134456576" target="_blank" rel="noopener">Microsoft サポート「ピボットテーブルを作成してワークシート データを分析する」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/office/%E3%82%BB%E3%83%AB%E3%81%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E3%82%92%E9%81%A9%E7%94%A8%E3%81%99%E3%82%8B-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249" target="_blank" rel="noopener">Microsoft サポート「セルにデータの入力規則を適用する」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/office/excel-%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E6%A6%82%E8%A6%81-7ab0bb7d-3a9e-4b56-a3c9-6c94334e492c" target="_blank" rel="noopener">Microsoft サポート「Excel のテーブルの概要」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/office/%E7%9B%B8%E5%AF%BE%E5%8F%82%E7%85%A7-%E7%B5%B6%E5%AF%BE%E5%8F%82%E7%85%A7-%E8%A4%87%E5%90%88%E5%8F%82%E7%85%A7%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B-dfec08cd-ae65-4f56-839e-5f0d8d0baca9" target="_blank" rel="noopener">Microsoft サポート「相対参照、絶対参照、複合参照を切り替える」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/office/%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-txt-%E3%81%BE%E3%81%9F%E3%81%AF-csv-%E3%82%92%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%BE%E3%81%9F%E3%81%AF%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%81%99%E3%82%8B-5250ac4c-663c-47ce-937b-339e391393ba" target="_blank" rel="noopener">Microsoft サポート「テキスト (.txt または .csv) ファイルのインポートまたはエクスポート」</a></li>
+    <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/security/internet-macros-blocked" target="_blank" rel="noopener">Microsoft Learn「インターネットからのマクロは、Office で既定でブロックされます」</a></li>
+    <li><a href="https://support.microsoft.com/ja-jp/topic/0952faa0-37e7-4316-b61d-5b5ed6024216" target="_blank" rel="noopener">Microsoft サポート「潜在的に危険なマクロがブロックされました」</a></li>
+    <li><a href="https://workspace.google.com/intl/ja/products/sheets/" target="_blank" rel="noopener">Google Workspace「Google スプレッドシート」</a></li>
+    <li><a href="https://support.google.com/docs/answer/148833?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「テンプレートからファイルを作成する」</a></li>
+    <li><a href="https://support.google.com/docs/answer/3093583?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「SUMIF」</a></li>
+    <li><a href="https://support.google.com/docs/answer/3238496?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「SUMIFS 関数」</a></li>
+    <li><a href="https://support.google.com/docs/answer/3092974?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「EDATE」</a></li>
+    <li><a href="https://support.google.com/docs/answer/3093343?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「QUERY 関数」</a></li>
+    <li><a href="https://developers.google.com/chart/interactive/docs/querylanguage?hl=ja" target="_blank" rel="noopener">Google for Developers「Query Language Reference」（group by・日付リテラル・month() が 0 始まり）</a></li>
+    <li><a href="https://support.google.com/docs/answer/3093340?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「IMPORTRANGE」</a></li>
+    <li><a href="https://support.google.com/docs/answer/186103?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「セル内にプルダウン リストを作成する」</a></li>
+    <li><a href="https://support.google.com/docs/answer/2494822?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「Google ドライブのファイルを共有する」</a></li>
+    <li><a href="https://support.google.com/docs/answer/6388102?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「オフライン時に Google ドキュメント、スプレッドシート、スライドで作業する」</a></li>
+    <li><a href="https://support.google.com/docs/answer/40608?hl=ja" target="_blank" rel="noopener">Google ドキュメント エディタ ヘルプ「データセットとスプレッドシートを読み込む」</a></li>
+    <li><a href="https://support.rakuten-card.jp/faq/show/2385?site_domain=guest" target="_blank" rel="noopener">楽天カード よくあるご質問「ご利用明細書のダウンロード方法を知りたい」（FAQ No. 2385）</a></li>
+    <li><a href="https://support.rakuten-card.jp/faq/show/4184?site_domain=guest" target="_blank" rel="noopener">楽天カード よくあるご質問「過去分の利用明細を確認する方法を知りたい」（FAQ No. 4184）</a></li>
+    <li><a href="https://www.smbc-card.com/mem/oshiharai/meisai_about.jsp" target="_blank" rel="noopener">三井住友カード「ご利用明細の見方と使い方」（閲覧可能期間・保存方法（csv ダウンロード）・Microsoft Excel での表示方法）</a></li>
+    <li><a href="https://j-faq.jcb.co.jp/faq/show/357?site_domain=default" target="_blank" rel="noopener">JCB よくあるご質問「カードご利用代金明細書のダウンロードはできますか？」（No. 357）</a></li>
+    <li><a href="https://j-faq.jcb.co.jp/faq/show/377?site_domain=default" target="_blank" rel="noopener">JCB よくあるご質問「過去の明細をさかのぼって確認したい。」（No. 377）</a></li>
+    <li><a href="https://faq.aeon.co.jp/faq/show/226?site_domain=default" target="_blank" rel="noopener">イオンカード よくあるご質問「ご請求明細書（PDF・CSV）のダウンロード・印刷方法を教えてください。」（No. 226）</a></li>
+    <li><a href="https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040424628&amp;fileKind=4" target="_blank" rel="noopener">総務省 家計調査 家計収支編 二人以上の世帯 年次 2025 年（e-Stat）表番号 3「世帯主の年齢階級別 1 世帯当たり 1 か月間の収入と支出（二人以上の世帯・勤労者世帯）」（Excel、2026 年 8 月 7 日公開）</a></li>
+  </ul>
+  <div class="related">
+    <a href="../../kakei/tegaki-kakeibo/">手書き家計簿の選び方</a>
+    <a href="../../kakei/tsuzuku-kakeibo/">続く家計簿の選び方<small>親記事</small></a>
+    <a href="../../kakei/app-kihon/">家計簿アプリの選び方</a>
+    <a href="../../kakei/kurashi-minaoshi/">家族の支出を 7 つのジャンルで見直す順番</a>
+    <a href="../../kakei/">家計・節約の記事一覧</a>
+  </div>
+</div></article>
+
+  </div>
+  <aside class="sidebar" aria-label="サイドバー">
+  <section class="side-box side-box--about">
+    <p class="side-box__label" aria-hidden="true">About</p>
+    <img class="side-box__avatar" src="../../assets/img/about-operator.webp" width="600" height="600" alt="運営者のイラスト" loading="lazy" decoding="async">
+    <p class="side-box__name">くらコツ</p>
+    <p class="side-box__text">ふるさと納税<span class="yk">、</span>宅配食<span class="yk">、</span>食品<span class="yk">、</span>家電<span class="yk">、</span>日用品<span class="yk">、</span>家具<span class="yk">、</span>旅行まで<span class="yk">。</span>公式の<wbr>一次情報を<wbr>深く<wbr>調べ<span class="yk">、</span>家族が<wbr>判断できる<wbr>形に<wbr>まとめたお得情報の<wbr>サイトです。</p>
+    <a class="side-box__more" href="../../about/">運営者情報</a>
+  </section>
+  <section class="side-box side-box--cats">
+    <p class="side-box__title"><i aria-hidden="true">Category</i><span>カテゴリ</span></p>
+    <ul class="side-cats"><li><a href="../../furusato/"><span class="side-cats__no">01</span><span>ふるさと納税</span></a></li><li><a href="../../takuhaishoku/"><span class="side-cats__no">02</span><span>宅配食</span></a></li><li><a href="../../shokuhin/"><span class="side-cats__no">03</span><span>食品</span></a></li><li><a href="../../kaden/"><span class="side-cats__no">04</span><span>家電</span></a></li><li><a href="../../nichiyohin/"><span class="side-cats__no">05</span><span>日用品</span></a></li><li><a href="../../kagu/"><span class="side-cats__no">06</span><span>家具</span></a></li><li><a href="../../ryoko/"><span class="side-cats__no">07</span><span>お得な旅行</span></a></li><li><a href="../../kakei/"><span class="side-cats__no">08</span><span>家計・節約</span></a></li></ul>
+  </section>
+  <section class="side-box">
+    <p class="side-box__title"><i aria-hidden="true">Feature</i><span>まず読みたい記事</span></p>
+    <ul class="side-posts side-posts--feature"><li><a href="../../kakei/tsuzuku-kakeibo/"><span class="side-posts__media"><img class="side-posts__thumb" src="../../assets/img/kakei-tsuzuku-kakeibo.webp" width="1200" height="675" alt="" loading="lazy" decoding="async"></span><span class="side-posts__text"><span class="side-posts__title">続く<wbr>家計簿の<wbr>選び方<span class="yk">。</span>手書き・エクセル・アプリの<wbr>費用と<wbr>手間<span class="yk">、</span>家計調査の<wbr>平均と<wbr>比べる 7 費目の<wbr>表</span></span></a></li><li><a href="../../kakei/kurashi-minaoshi/"><span class="side-posts__media"><img class="side-posts__thumb" src="../../assets/img/kakei-kurashi-minaoshi.webp" width="1200" height="675" alt="" loading="lazy" decoding="async"></span><span class="side-posts__text"><span class="side-posts__title">家族の<wbr>支出を 7 つの<wbr>ジャンルで<wbr>見直す<wbr>順番<span class="yk">。</span>家計調査の<wbr>平均と<span class="yk">、</span>年間で<wbr>いくら<wbr>変わるかの<wbr>試算</span></span></a></li><li><a href="../../furusato/hajimete-erabikata/"><span class="side-posts__media"><img class="side-posts__thumb" src="../../assets/img/furusato-hajimete-erabikata.webp" width="1200" height="675" alt="" loading="lazy" decoding="async"></span><span class="side-posts__text"><span class="side-posts__title">ふるさと納税の<wbr>始め方と<wbr>返礼品の<wbr>選び方<span class="yk">。</span>自己負担 2,000 円の<wbr>仕組み<span class="yk">、</span>上限の<wbr>目安表<span class="yk">、</span>ワンストップ特例と<wbr>確定申告の<wbr>分岐</span></span></a></li></ul>
+  </section>
+  <section class="side-box">
+    <p class="side-box__title"><i aria-hidden="true">Latest</i><span>新着記事</span></p>
+    <ul class="side-posts"><li><a href="../../kakei/fuyu-denkidai/"><span class="side-posts__media"><span class="side-posts__ph post-card__ph--kakei" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 14.5h2"/><path d="M7 3.5h10"/></svg></span></span><span class="side-posts__text"><span class="side-posts__title">冬の<wbr>電気代は<wbr>いくらになる？ 2026 年度冬の<wbr>請求額の<wbr>見積もり方と<span class="yk">、</span>効く<wbr>節約・国の<wbr>支援の<wbr>状況</span><span class="side-posts__date">2026.11.21</span></span></a></li><li><a href="../../furusato/teikibin/"><span class="side-posts__media"><span class="side-posts__ph post-card__ph--furusato" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12"/><path d="M12 9C10.6 6 7 5.6 7 7.6 7 9 9.6 9 12 9zM12 9c1.4-3 5-3.4 5-1.4C17 9 14.4 9 12 9z"/></svg></span></span><span class="side-posts__text"><span class="side-posts__title">ふるさと納税の<wbr>定期便<span class="yk">。</span>米・肉・フルーツ・野菜・日用品の<wbr>実在 17 件を<wbr><span class="yk yk--open">「</span>1 回あたり・寄付 1 万円あたり<span class="yk">」</span>で<wbr>比較<span class="yk">、</span>年末に<wbr>申し込んだ<wbr>時の<wbr>初回発送月</span><span class="side-posts__date">2026.11.20</span></span></a></li><li><a href="../../shokuhin/oseibo/"><span class="side-posts__media"><span class="side-posts__ph post-card__ph--shokuhin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 7.5c1.2-1.6 2.5-2.5 4-2.5s2.8.9 4 2.5"/><path d="M9 21h6"/></svg></span></span><span class="side-posts__text"><span class="side-posts__title">お歳暮の<wbr>おすすめ 2026<span class="yk">。</span>予算 3,000／5,000／1 万円で<wbr>比べる<wbr>食品 25 品と<wbr>相場・時期・のし・喪中・お礼状</span><span class="side-posts__date">2026.11.19</span></span></a></li><li><a href="../../kakei/nengajo/"><span class="side-posts__media"><span class="side-posts__ph post-card__ph--kakei" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 14.5h2"/><path d="M7 3.5h10"/></svg></span></span><span class="side-posts__text"><span class="side-posts__title">年賀状の<wbr>印刷はどこが<wbr>安い？2027 年用 50 枚・100 枚の<wbr>総額を<wbr>郵便局・ネット印刷・カメラ店・コンビニ・自宅で<wbr>比較<span class="yk">、</span>投函は 12 月 27 日まで</span><span class="side-posts__date">2026.11.18</span></span></a></li><li><a href="../../shokuhin/christmas-cake/"><span class="side-posts__media"><span class="side-posts__ph post-card__ph--shokuhin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 7.5c1.2-1.6 2.5-2.5 4-2.5s2.8.9 4 2.5"/><path d="M9 21h6"/></svg></span></span><span class="side-posts__text"><span class="side-posts__title">クリスマスケーキ予約 2026<span class="yk">。</span>コンビニ・不二家・シャトレーゼ・通販の<wbr>価格と<wbr>締切<span class="yk">、</span>号数と<wbr>人数<span class="yk">、</span>冷凍ケーキの<wbr>解凍時間</span><span class="side-posts__date">2026.11.17</span></span></a></li></ul>
+  </section>
+</aside>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__head">
+      <p class="site-footer__kicker" aria-hidden="true">Thank you for reading.</p>
+      <p class="site-footer__tagline">コツコツ得する暮らしのコツ</p>
+    </div>
+    <div class="site-footer__cols">
+      <nav class="site-footer__nav site-footer__nav--cats" aria-label="カテゴリ（フッター）">
+        <p class="site-footer__label" aria-hidden="true">Category</p>
+        <a href="../../furusato/">ふるさと納税</a>
+        <a href="../../takuhaishoku/">宅配食</a>
+        <a href="../../shokuhin/">食品</a>
+        <a href="../../kaden/">家電</a>
+        <a href="../../nichiyohin/">日用品</a>
+        <a href="../../kagu/">家具</a>
+        <a href="../../ryoko/">お得な旅行</a>
+        <a href="../../kakei/">家計・節約</a>
+      </nav>
+      <nav class="site-footer__nav" aria-label="サイトについて（フッター）">
+        <p class="site-footer__label" aria-hidden="true">About</p>
+        <a href="../../">トップ</a>
+        <a href="../../about/">運営者情報</a>
+        <a href="../../ad-policy/">広告掲載について</a>
+        <a href="../../privacy/">プライバシーポリシー</a>
+      </nav>
+    </div>
+    <p class="site-footer__note">当サイトはアフィリエイトプログラム（楽天アフィリエイト、Amazon アソシエイト）を利用しています。</p>
+    <a class="site-footer__logo" href="../../"><img class="site-footer__logo-img" src="../../assets/img/logo.webp" width="1000" height="663" alt="くらコツ" decoding="async"></a>
+    <p class="site-footer__copyright">Copyright(C) 2026 コツコツ得する暮らしのコツ　くらコツ <span>All rights reserved.</span></p>
+  </div>
+</footer>
+<script src="../../site/site.js" defer></script>
+</body>
+</html>
