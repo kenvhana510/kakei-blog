@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T23:15:28.698Z",
+  "generatedAt": "2026-10-21T13:38:21.143Z",
   "from": "2026-10-21",
   "to": "2027-02-28",
   "days": {
@@ -1878,6 +1878,7 @@
         "kakei/super-sale-12"
       ],
       "files": [
+        "assets/img/kakei-super-sale-12.webp",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
         "furusato/jiki-itsu/index.html",
@@ -2009,6 +2010,7 @@
         "furusato/one-stop"
       ],
       "files": [
+        "assets/img/furusato-one-stop.webp",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
         "furusato/index.html",
@@ -2076,6 +2078,7 @@
         "furusato/jutaku-loan"
       ],
       "files": [
+        "assets/img/furusato-jutaku-loan.webp",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
         "furusato/index.html",
@@ -2144,6 +2147,7 @@
         "kaden/denki-moufu"
       ],
       "files": [
+        "assets/img/kaden-denki-moufu.webp",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
         "furusato/jiki-itsu/index.html",
@@ -2213,6 +2217,7 @@
         "kakei/nenmatsu-kanpu"
       ],
       "files": [
+        "assets/img/kakei-nenmatsu-kanpu.webp",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
         "furusato/jiki-itsu/index.html",
@@ -2283,6 +2288,7 @@
         "ryoko/nenmatsu-nenshi"
       ],
       "files": [
+        "assets/img/ryoko-nenmatsu-nenshi.webp",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
         "furusato/jiki-itsu/index.html",
@@ -2354,6 +2360,7 @@
         "kakei/bonus"
       ],
       "files": [
+        "assets/img/kakei-bonus.webp",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
         "furusato/jiki-itsu/index.html",
@@ -2426,6 +2433,7 @@
         "furusato/fruits"
       ],
       "files": [
+        "assets/img/furusato-fruits.webp",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -2499,6 +2507,7 @@
         "kaden/hot-carpet"
       ],
       "files": [
+        "assets/img/kaden-hot-carpet.webp",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -2573,6 +2582,7 @@
         "shokuhin/net-super"
       ],
       "files": [
+        "assets/img/shokuhin-net-super.webp",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -2724,6 +2734,7 @@
         "kakei/otoshidama"
       ],
       "files": [
+        "assets/img/kakei-otoshidama.webp",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -2801,6 +2812,7 @@
         "furusato/ranking"
       ],
       "files": [
+        "assets/img/furusato-ranking.webp",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -2879,6 +2891,7 @@
         "kakei/kakuyasu-sim"
       ],
       "files": [
+        "assets/img/kakei-kakuyasu-sim.webp",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -2958,6 +2971,7 @@
         "furusato/tomobataraki"
       ],
       "files": [
+        "assets/img/furusato-tomobataraki.webp",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -3038,6 +3052,7 @@
         "kakei/fukubukuro"
       ],
       "files": [
+        "assets/img/kakei-fukubukuro.webp",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -3119,6 +3134,7 @@
         "furusato/amazon"
       ],
       "files": [
+        "assets/img/furusato-amazon.webp",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
@@ -3201,6 +3217,7 @@
         "nichiyohin/oosouji"
       ],
       "files": [
+        "assets/img/nichiyohin-oosouji.webp",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
@@ -3284,6 +3301,7 @@
         "kakei/nyugaku-junbi"
       ],
       "files": [
+        "assets/img/kakei-nyugaku-junbi.webp",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
@@ -3368,6 +3386,7 @@
         "shokuhin/toshikoshi-soba"
       ],
       "files": [
+        "assets/img/shokuhin-toshikoshi-soba.webp",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
         "furusato/hajimete-erabikata/index.html",
@@ -3453,6 +3472,7 @@
         "furusato/2027-kaisei"
       ],
       "files": [
+        "assets/img/furusato-2027-kaisei.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -3539,6 +3559,7 @@
         "kakei/gensen-choshu"
       ],
       "files": [
+        "assets/img/kakei-gensen-choshu.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -3626,6 +3647,7 @@
         "kakei/kakutei-shinkoku"
       ],
       "files": [
+        "assets/img/kakei-kakutei-shinkoku.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -3714,6 +3736,7 @@
         "furusato/kakutei-shinkoku"
       ],
       "files": [
+        "assets/img/furusato-kakutei-shinkoku.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -3803,6 +3826,7 @@
         "kakei/iryohi-kojo"
       ],
       "files": [
+        "assets/img/kakei-iryohi-kojo.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -3893,6 +3917,7 @@
         "kakei/denki-gas-hojo"
       ],
       "files": [
+        "assets/img/kakei-denki-gas-hojo.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -3984,6 +4009,7 @@
         "furusato/hamburg"
       ],
       "files": [
+        "assets/img/furusato-hamburg.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -4076,6 +4102,7 @@
         "kakei/nenmatsu-nenshi-yosan"
       ],
       "files": [
+        "assets/img/kakei-nenmatsu-nenshi-yosan.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -4169,6 +4196,7 @@
         "kakei/2027-kakei-keikaku"
       ],
       "files": [
+        "assets/img/kakei-2027-kakei-keikaku.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -4263,6 +4291,7 @@
         "kakei/2027-seido"
       ],
       "files": [
+        "assets/img/kakei-2027-seido.webp",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
         "furusato/fruits/index.html",
@@ -7799,6 +7828,7 @@
         "kakei/kakutei-shinkoku-sumaho"
       ],
       "files": [
+        "assets/img/kakei-kakutei-shinkoku-sumaho.webp",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
         "furusato/amazon/index.html",
