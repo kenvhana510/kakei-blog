@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T00:26:45.624Z",
+  "generatedAt": "2026-10-24T04:28:40.279Z",
   "from": "2026-10-24",
   "to": "2027-02-28",
   "days": {
@@ -1935,6 +1935,7 @@
         "ryoko/rakuten-travel-sale"
       ],
       "files": [
+        "assets/img/ryoko-rakuten-travel-sale.webp",
         "feed.xml",
         "furusato/hajimete-erabikata/index.html",
         "furusato/hotate/index.html",
@@ -8041,6 +8042,7 @@
         "kakei/fukugyou-kakutei-shinkoku"
       ],
       "files": [
+        "assets/img/kakei-fukugyou-kakutei-shinkoku.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -8170,6 +8172,7 @@
         "kakei/jutaku-loan-shonendo"
       ],
       "files": [
+        "assets/img/kakei-jutaku-loan-shonendo.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -8300,6 +8303,7 @@
         "kakei/kanpukin-itsu"
       ],
       "files": [
+        "assets/img/kakei-kanpukin-itsu.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -8431,6 +8435,7 @@
         "kakei/kokumin-nenkin-zennou"
       ],
       "files": [
+        "assets/img/kakei-kokumin-nenkin-zennou.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -8563,6 +8568,7 @@
         "nichiyohin/kafun-goods"
       ],
       "files": [
+        "assets/img/nichiyohin-kafun-goods.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -8696,6 +8702,7 @@
         "kaden/kuki-seijouki-denkidai"
       ],
       "files": [
+        "assets/img/kaden-kuki-seijouki-denkidai.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -8830,6 +8837,7 @@
         "kakei/yukadanbou-denkidai"
       ],
       "files": [
+        "assets/img/kakei-yukadanbou-denkidai.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -8965,6 +8973,7 @@
         "kaden/drum-sentakuki-denkidai"
       ],
       "files": [
+        "assets/img/kaden-drum-sentakuki-denkidai.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -9101,6 +9110,7 @@
         "kakei/suidoudai"
       ],
       "files": [
+        "assets/img/kakei-suidoudai.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -9238,6 +9248,7 @@
         "kakei/denki-gas-set"
       ],
       "files": [
+        "assets/img/kakei-denki-gas-set.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -9376,6 +9387,7 @@
         "kakei/subsc-kaiyaku"
       ],
       "files": [
+        "assets/img/kakei-subsc-kaiyaku.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -9515,6 +9527,7 @@
         "kakei/nisa-hajimekata"
       ],
       "files": [
+        "assets/img/kakei-nisa-hajimekata.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -9655,6 +9668,7 @@
         "kakei/jidou-teate"
       ],
       "files": [
+        "assets/img/kakei-jidou-teate.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -9796,6 +9810,7 @@
         "kakei/naraigoto-hiyou"
       ],
       "files": [
+        "assets/img/kakei-naraigoto-hiyou.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -9938,6 +9953,7 @@
         "kakei/nyuen-junbi"
       ],
       "files": [
+        "assets/img/kakei-nyuen-junbi.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -10081,6 +10097,7 @@
         "kakei/nyugaku-iwai"
       ],
       "files": [
+        "assets/img/kakei-nyugaku-iwai.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -10225,6 +10242,7 @@
         "kaden/hitorigurashi-set"
       ],
       "files": [
+        "assets/img/kaden-hitorigurashi-set.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -10370,6 +10388,7 @@
         "kakei/shaken-hiyou"
       ],
       "files": [
+        "assets/img/kakei-shaken-hiyou.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -10516,6 +10535,7 @@
         "kakei/jidosha-hoken"
       ],
       "files": [
+        "assets/img/kakei-jidosha-hoken.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -10663,6 +10683,7 @@
         "kakei/kasai-hoken"
       ],
       "files": [
+        "assets/img/kakei-kasai-hoken.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -10811,6 +10832,7 @@
         "kakei/iryo-hoken"
       ],
       "files": [
+        "assets/img/kakei-iryo-hoken.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -10960,6 +10982,7 @@
         "shokuhin/ichigo"
       ],
       "files": [
+        "assets/img/shokuhin-ichigo.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -11110,6 +11133,7 @@
         "shokuhin/hinamatsuri"
       ],
       "files": [
+        "assets/img/shokuhin-hinamatsuri.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -11261,6 +11285,7 @@
         "kakei/whiteday"
       ],
       "files": [
+        "assets/img/kakei-whiteday.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -11413,6 +11438,7 @@
         "ryoko/sotsugyou-ryoko"
       ],
       "files": [
+        "assets/img/ryoko-sotsugyou-ryoko.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -11566,6 +11592,7 @@
         "ryoko/gw-ryoko"
       ],
       "files": [
+        "assets/img/ryoko-gw-ryoko.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
@@ -11720,6 +11747,7 @@
         "kakei/super-sale-3"
       ],
       "files": [
+        "assets/img/kakei-super-sale-3.webp",
         "feed.xml",
         "furusato/2027-hajime/index.html",
         "furusato/2027-kaisei/index.html",
