@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-24T04:28:40.279Z",
-  "from": "2026-10-24",
+  "generatedAt": "2026-10-25T23:05:42.942Z",
+  "from": "2026-10-26",
   "to": "2027-02-28",
   "days": {
-    "2026-10-24": {
+    "2026-10-26": {
       "publishes": [
-        "furusato/kani"
+        "kaden/jitan-kaden"
       ],
       "files": [
         ".nojekyll",
@@ -30,7 +30,9 @@
         "assets/img/furusato-nichiyohin-kome.webp",
         "assets/img/furusato-site-erabikata.webp",
         "assets/img/furusato-tabemono-igai.webp",
+        "assets/img/furusato-unagi-niku.webp",
         "assets/img/home-hero.webp",
+        "assets/img/kaden-jitan-kaden.webp",
         "assets/img/kakei-kurashi-minaoshi.webp",
         "assets/img/kakei-marathon-kihon.webp",
         "assets/img/kakei-poikatsu-kihon.webp",
@@ -52,8 +54,10 @@
         "furusato/nichiyohin-kome/index.html",
         "furusato/site-erabikata/index.html",
         "furusato/tabemono-igai/index.html",
+        "furusato/unagi-niku/index.html",
         "index.html",
         "kaden/index.html",
+        "kaden/jitan-kaden/index.html",
         "kagu/index.html",
         "kakei/index.html",
         "kakei/kurashi-minaoshi/index.html",
@@ -69,6 +73,9 @@
         "ryoko/kazoku-ryoko-yasuku/index.html",
         "shokuhin/index.html",
         "shokuhin/okome-tsuhan/index.html",
+        "site/furusato-calc.js",
+        "site/furusato-tool.css",
+        "site/furusato-tool.js",
         "site/icon-180.png",
         "site/icon-32.png",
         "site/icon-512.png",
@@ -78,69 +85,8 @@
         "site/theme.css",
         "sitemap.xml",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/index.html"
-      ]
-    },
-    "2026-10-25": {
-      "publishes": [
-        "furusato/unagi-niku"
-      ],
-      "files": [
-        "assets/img/furusato-unagi-niku.webp",
-        "feed.xml",
-        "furusato/hajimete-erabikata/index.html",
-        "furusato/index.html",
-        "furusato/jiki-itsu/index.html",
-        "furusato/kaden/index.html",
-        "furusato/kani/index.html",
-        "furusato/kogaku-kospa/index.html",
-        "furusato/nichiyohin-kome/index.html",
-        "furusato/site-erabikata/index.html",
-        "furusato/tabemono-igai/index.html",
-        "furusato/unagi-niku/index.html",
-        "index.html",
-        "kakei/kurashi-minaoshi/index.html",
-        "kakei/marathon-kihon/index.html",
-        "kakei/poikatsu-kihon/index.html",
-        "kakei/point-tsukaimichi/index.html",
-        "kakei/tsuzuku-kakeibo/index.html",
-        "nichiyohin/matomegai-stock/index.html",
-        "ryoko/kazoku-ryoko-yasuku/index.html",
-        "shokuhin/index.html",
-        "shokuhin/okome-tsuhan/index.html",
-        "sitemap.xml",
-        "takuhaishoku/erabikata/index.html"
-      ]
-    },
-    "2026-10-26": {
-      "publishes": [
-        "kaden/jitan-kaden"
-      ],
-      "files": [
-        "assets/img/kaden-jitan-kaden.webp",
-        "feed.xml",
-        "furusato/hajimete-erabikata/index.html",
-        "furusato/jiki-itsu/index.html",
-        "furusato/kaden/index.html",
-        "furusato/kani/index.html",
-        "furusato/kogaku-kospa/index.html",
-        "furusato/nichiyohin-kome/index.html",
-        "furusato/site-erabikata/index.html",
-        "furusato/tabemono-igai/index.html",
-        "furusato/unagi-niku/index.html",
-        "index.html",
-        "kaden/index.html",
-        "kaden/jitan-kaden/index.html",
-        "kakei/kurashi-minaoshi/index.html",
-        "kakei/marathon-kihon/index.html",
-        "kakei/poikatsu-kihon/index.html",
-        "kakei/point-tsukaimichi/index.html",
-        "kakei/tsuzuku-kakeibo/index.html",
-        "nichiyohin/matomegai-stock/index.html",
-        "ryoko/kazoku-ryoko-yasuku/index.html",
-        "shokuhin/okome-tsuhan/index.html",
-        "sitemap.xml",
-        "takuhaishoku/erabikata/index.html"
+        "takuhaishoku/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-10-27": {
@@ -822,7 +768,8 @@
         "shokuhin/okome-tsuhan/index.html",
         "shokuhin/osechi-tsuhan/index.html",
         "sitemap.xml",
-        "takuhaishoku/erabikata/index.html"
+        "takuhaishoku/erabikata/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-11-13": {
@@ -1243,7 +1190,8 @@
         "shokuhin/osechi-tsuhan/index.html",
         "shokuhin/oseibo/index.html",
         "sitemap.xml",
-        "takuhaishoku/erabikata/index.html"
+        "takuhaishoku/erabikata/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-11-21": {
@@ -1539,7 +1487,8 @@
         "shokuhin/oseibo/index.html",
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
-        "takuhaishoku/erabikata/index.html"
+        "takuhaishoku/erabikata/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-11-26": {
@@ -1860,7 +1809,8 @@
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/mealkit/index.html"
+        "takuhaishoku/mealkit/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-12-01": {
@@ -2064,7 +2014,8 @@
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/mealkit/index.html"
+        "takuhaishoku/mealkit/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-12-04": {
@@ -2134,7 +2085,8 @@
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/mealkit/index.html"
+        "takuhaishoku/mealkit/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-12-05": {
@@ -2499,7 +2451,8 @@
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/mealkit/index.html"
+        "takuhaishoku/mealkit/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-12-10": {
@@ -2730,7 +2683,8 @@
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/mealkit/index.html"
+        "takuhaishoku/mealkit/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-12-13": {
@@ -3052,7 +3006,8 @@
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/mealkit/index.html"
+        "takuhaishoku/mealkit/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-12-17": {
@@ -3835,7 +3790,8 @@
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/mealkit/index.html"
+        "takuhaishoku/mealkit/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-12-26": {
@@ -4114,7 +4070,8 @@
         "sitemap.xml",
         "takuhaishoku/coop/index.html",
         "takuhaishoku/erabikata/index.html",
-        "takuhaishoku/mealkit/index.html"
+        "takuhaishoku/mealkit/index.html",
+        "tools/furusato-jogen/index.html"
       ]
     },
     "2026-12-29": {
